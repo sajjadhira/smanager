@@ -61,7 +61,7 @@ $_SESSION['transaction_id'] = $trnxId;
 	        }
     
         	    
-	    $ch = curl_init();
+	$ch = curl_init();
         curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -81,7 +81,7 @@ $_SESSION['transaction_id'] = $trnxId;
           header("Location: ".$url);
           die;
         }else{
-          echo 'There is an error with payment';
+          echo 'There is an error with payment, Error: '.$response->message;
         }
     
   }catch (\Exception $ex) {
