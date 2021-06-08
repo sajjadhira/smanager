@@ -39,6 +39,13 @@ if (isset($_SESSION['transaction_id']) && isset($_SESSION['invoice_id']) && isse
 
 
             if($response->data->payment_status == 'completed'){
+		    
+            /* unset stored session */
+	    @unset($_SESSION['transaction_id']);
+            @unset($_SESSION['invoice_id']);    
+            @unset($_SESSION['payment_url']);
+	   /* unset stored session */
+		    
             // it means your payment is completed, now you can do anything with your invoice.
             // you can get your invoice id from session using $invoice_id (predefined) variable 
 
