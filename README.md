@@ -1,2 +1,2 @@
 # smanager
-sManager Payment Gateway Integration with raw PHP
+sManager Payment Gateway Integration with raw PHP (Unofficial)
